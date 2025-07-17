@@ -1,0 +1,30 @@
+src/
+├── config/              # Configuración general (envs, constantes)
+│   └── envs.ts
+├── database/            # Conexión a MySQL
+│   └── db.ts
+├── middlewares/         # JWT, CORS, manejo de errores
+│   └── validate-jwt.ts
+├── modules/
+│   ├── auth/            # Login, generación y validación de tokens
+│   │   ├── auth.controller.ts
+│   │   ├── auth.routes.ts
+│   │   └── auth.service.ts
+│   ├── users/           # Info de usuarios, API keys, etc.
+│   │   ├── user.model.ts
+│   │   ├── user.controller.ts
+│   │   ├── user.routes.ts
+│   │   └── user.service.ts
+│   ├── gemini/          # API de generación de texto
+│   │   ├── gemini.controller.ts
+│   │   └── gemini.service.ts
+│   ├── veo/             # API de generación de video
+│   │   ├── veo.controller.ts
+│   │   └── veo.service.ts
+│   └── youtube/         # API para subir videos a YouTube
+│       ├── youtube.controller.ts
+│       └── youtube.service.ts
+├── routes/              # Rutas agrupadas de todos los módulos
+│   └── index.routes.ts
+├── app.ts               # Configuración de Express y middlewares
+└── index.ts             # Punto de arranque (server.listen)
